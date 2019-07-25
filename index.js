@@ -10,3 +10,7 @@ function exactMatch(drivers,obj){
   let objKey = Object.keys(obj);
   return drivers.filter(driver => driver[objKey[0]] === obj[objKey[0]]);
 }
+
+function exactMatchToList(drivers,obj){
+  return exactMatch(drivers,obj).map(driver => driver.name);
+}
